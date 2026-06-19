@@ -26,55 +26,7 @@
   overflow: hidden;
 }
 
-.tasks-page__form {
-  display: grid;
-  gap: 16px;
-}
 
-.tasks-page__form-grid {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.95fr) minmax(320px, 1.35fr);
-  gap: 16px;
-  align-items: stretch;
-}
-
-.tasks-page__form-column {
-  display: grid;
-  gap: 12px;
-}
-
-.tasks-page__form-column--inputs {
-  grid-auto-rows: min-content;
-}
-
-.tasks-page__form-column--description {
-  min-height: 0;
-}
-
-.tasks-page__field {
-  display: grid;
-  gap: 8px;
-}
-
-.tasks-page__field span {
-  color: #374151;
-  font-weight: 500;
-}
-
-.tasks-page__field textarea {
-  resize: none;
-}
-
-.tasks-page__field--description,
-.tasks-page__field--description .ant-input-textarea,
-.tasks-page__field--description .ant-input-textarea textarea {
-  height: 100%;
-}
-
-.tasks-page__hint {
-  margin: 16px 0 0 !important;
-  color: #6b7280;
-}
 
 .tasks-page__alert {
   margin-bottom: 16px;
