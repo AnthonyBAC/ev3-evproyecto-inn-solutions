@@ -81,6 +81,39 @@ export function AppLayout({
           </div>
 
           <div className="app-layout__sider-footer">
+            {!isCollapsed ? (
+              <button
+                className="app-layout__logout-row"
+                type="button"
+                onClick={onLogout}
+              >
+                <span className="app-layout__logout-row__main">
+                  <LogOut size={18} />
+                  <span>Cerrar sesion</span>
+                </span>
+                <Tooltip placement="top" title="Colapsar">
+                  <span
+                    className="app-layout__collapse-btn"
+                    role="button"
+                    tabIndex={0}
+                    onClick={(event) => {
+                      event.stopPropagation()
+                      setIsCollapsed(!isCollapsed)
+                    }}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault()
+                        event.stopPropagation()
+                        setIsCollapsed(!isCollapsed)
+                      }
+                    }}
+                  >
+                    <ChevronLeft size={18} />
+                  </span>
+                </Tooltip>
+              </button>
+            ) : null}
+
             {isCollapsed ? (
               <Tooltip placement="right" title="Expandir">
                 <button
@@ -102,17 +135,6 @@ export function AppLayout({
               <LogOut size={18} />
               {!isCollapsed ? <span>Cerrar sesion</span> : null}
             </button>
-
-            {!isCollapsed ? (
-              <button
-                className="app-layout__collapse-btn"
-                type="button"
-                onClick={() => setIsCollapsed(!isCollapsed)}
-              >
-                <ChevronLeft size={18} />
-                <span>Colapsar</span>
-              </button>
-            ) : null}
           </div>
         </div>
       </Sider>

@@ -83,25 +83,23 @@
 }
 
 .app-layout__collapse-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 9px 12px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
   border: 0;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
   color: #ffffff;
-  font-size: 0.88rem;
-  font-weight: 600;
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.2s ease;
 }
 
 .app-layout__collapse-btn:hover {
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.32);
 }
 
 .app-layout__collapse-btn svg {
@@ -111,8 +109,43 @@
 .app-layout__collapse-btn--compact {
   width: 40px;
   height: 40px;
-  padding: 0;
   align-self: center;
+}
+
+.app-layout__logout-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #ff2b2b;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.app-layout__logout-row:hover {
+  background: #e60000;
+}
+
+.app-layout__logout-row__main {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-layout__logout-row .app-layout__collapse-btn {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.app-layout__logout-row .app-layout__collapse-btn:hover {
+  background: rgba(0, 0, 0, 0.32);
 }
 
 .app-layout__menu {
