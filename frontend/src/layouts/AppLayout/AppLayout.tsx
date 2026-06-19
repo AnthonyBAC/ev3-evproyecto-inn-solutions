@@ -53,88 +53,90 @@ export function AppLayout({
         trigger={null}
       >
         <div className="app-layout__sider-inner">
-          <div className="app-layout__sider-top">
-            <div className="app-layout__brand">
-              <div className="app-layout__brand-icon">
-                <BriefcaseBusiness size={20} />
-              </div>
-              {!isCollapsed ? (
-                <div className="app-layout__brand-text">
-                  <p className="app-layout__eyebrow">EV Proyecto EV3</p>
-                  <h1 className="app-layout__brand-title">Innovatech MVP</h1>
+          <div className="app-layout__sider-rail">
+            <div className="app-layout__sider-top">
+              <div className="app-layout__brand">
+                <div className="app-layout__brand-icon">
+                  <BriefcaseBusiness size={20} />
                 </div>
-              ) : null}
+                {!isCollapsed ? (
+                  <div className="app-layout__brand-text">
+                    <p className="app-layout__eyebrow">EV Proyecto EV3</p>
+                    <h1 className="app-layout__brand-title">Innovatech MVP</h1>
+                  </div>
+                ) : null}
+              </div>
+
+              <Menu
+                className="app-layout__menu"
+                inlineCollapsed={isCollapsed}
+                items={NAVIGATION_ITEMS}
+                mode="inline"
+                selectedKeys={[selectedPage]}
+                onClick={({ key }) => {
+                  if (isAppPageKey(key)) {
+                    onSelectPage(key)
+                  }
+                }}
+              />
             </div>
 
-            <Menu
-              className="app-layout__menu"
-              inlineCollapsed={isCollapsed}
-              items={NAVIGATION_ITEMS}
-              mode="inline"
-              selectedKeys={[selectedPage]}
-              onClick={({ key }) => {
-                if (isAppPageKey(key)) {
-                  onSelectPage(key)
-                }
-              }}
-            />
-          </div>
+            <div className="app-layout__sider-footer">
+              {!isCollapsed ? (
+                <button
+                  className="app-layout__logout-row"
+                  type="button"
+                  onClick={onLogout}
+                >
+                  <span className="app-layout__logout-row__main">
+                    <LogOut size={18} />
+                    <span>Cerrar sesion</span>
+                  </span>
+                  <Tooltip placement="top" title="Colapsar">
+                    <span
+                      className="app-layout__collapse-btn"
+                      role="button"
+                      tabIndex={0}
+                      onClick={(event) => {
+                        event.stopPropagation()
+                        setIsCollapsed(!isCollapsed)
+                      }}
+                      onKeyDown={(event) => {
+                        if (event.key === 'Enter' || event.key === ' ') {
+                          event.preventDefault()
+                          event.stopPropagation()
+                          setIsCollapsed(!isCollapsed)
+                        }
+                      }}
+                    >
+                      <ChevronLeft size={18} />
+                    </span>
+                  </Tooltip>
+                </button>
+              ) : null}
 
-          <div className="app-layout__sider-footer">
-            {!isCollapsed ? (
+              {isCollapsed ? (
+                <Tooltip placement="right" title="Expandir">
+                  <button
+                    aria-label="Expandir"
+                    className="app-layout__collapse-btn app-layout__collapse-btn--compact"
+                    type="button"
+                    onClick={() => setIsCollapsed(!isCollapsed)}
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </Tooltip>
+              ) : null}
+
               <button
-                className="app-layout__logout-row"
+                className="app-layout__logout-btn"
                 type="button"
                 onClick={onLogout}
               >
-                <span className="app-layout__logout-row__main">
-                  <LogOut size={18} />
-                  <span>Cerrar sesion</span>
-                </span>
-                <Tooltip placement="top" title="Colapsar">
-                  <span
-                    className="app-layout__collapse-btn"
-                    role="button"
-                    tabIndex={0}
-                    onClick={(event) => {
-                      event.stopPropagation()
-                      setIsCollapsed(!isCollapsed)
-                    }}
-                    onKeyDown={(event) => {
-                      if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault()
-                        event.stopPropagation()
-                        setIsCollapsed(!isCollapsed)
-                      }
-                    }}
-                  >
-                    <ChevronLeft size={18} />
-                  </span>
-                </Tooltip>
+                <LogOut size={18} />
+                {!isCollapsed ? <span>Cerrar sesion</span> : null}
               </button>
-            ) : null}
-
-            {isCollapsed ? (
-              <Tooltip placement="right" title="Expandir">
-                <button
-                  aria-label="Expandir"
-                  className="app-layout__collapse-btn app-layout__collapse-btn--compact"
-                  type="button"
-                  onClick={() => setIsCollapsed(!isCollapsed)}
-                >
-                  <ChevronRight size={18} />
-                </button>
-              </Tooltip>
-            ) : null}
-
-            <button
-              className="app-layout__logout-btn"
-              type="button"
-              onClick={onLogout}
-            >
-              <LogOut size={18} />
-              {!isCollapsed ? <span>Cerrar sesion</span> : null}
-            </button>
+            </div>
           </div>
         </div>
       </Sider>

@@ -19,8 +19,18 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 22px 16px;
+  padding: 22px 0;
   overflow: hidden;
+}
+
+.app-layout__sider-rail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .app-layout__sider-top {
@@ -35,15 +45,16 @@
   flex-direction: column;
   gap: 8px;
   flex-shrink: 0;
+  align-items: center;
 }
 
 .app-layout__brand {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   min-width: 0;
   overflow: hidden;
-  padding: 0 4px;
 }
 
 .app-layout__brand-icon {
@@ -55,6 +66,33 @@
   background: rgba(255, 255, 255, 0.16);
   color: #ffffff;
   flex-shrink: 0;
+}
+
+/* Collapsed state: align every block to the same 40px column */
+.app-layout__sider.ant-layout-sider-collapsed .app-layout__brand {
+  justify-content: center;
+  padding: 0;
+}
+
+.app-layout__sider.ant-layout-sider-collapsed .app-layout__menu .ant-menu-item {
+  display: flex;
+  justify-content: center;
+  padding: 0 !important;
+  margin-inline: 0 !important;
+}
+
+.app-layout__sider.ant-layout-sider-collapsed .app-layout__sider-footer {
+  align-items: center;
+}
+
+.app-layout__sider.ant-layout-sider-collapsed .app-layout__collapse-btn,
+.app-layout__sider.ant-layout-sider-collapsed .app-layout__logout-btn {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 12px;
 }
 
 .app-layout__brand-text {
