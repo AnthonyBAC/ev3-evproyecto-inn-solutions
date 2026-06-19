@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Test / coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Cache
+.cache/
+.parcel-cache/
+.vite/
+.eslintcache
+.pnpm-store/
+
+# Misc
+*.local
+*.pid
+*.seed
+*.pid.lock
+.history/
+
+# Backend specific
+backend/coverage/
+
+# Frontend specific
+frontend/dist/
+frontend/.vite/
+
+# Secrets (defensive)
+*.pem
+*.key
+secrets/

@@ -1,0 +1,31 @@
+.dashboard-page {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: 16px;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.dashboard-page__metric-card {
+  border-color: #e5e7eb;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-page > .ant-row:last-child {
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dashboard-page > .ant-row:last-child .ant-col {
+  display: flex;
+  min-height: 0;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    grid-template-rows: auto auto auto;
+  }
+}

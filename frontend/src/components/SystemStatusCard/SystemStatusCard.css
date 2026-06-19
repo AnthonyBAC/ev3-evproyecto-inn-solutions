@@ -1,0 +1,20 @@
+.system-status-card {
+  height: 100%;
+}
+
+.system-status-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.system-status-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.system-status-card__details .ant-descriptions-item-label {
+  color: #6b7280;
+}

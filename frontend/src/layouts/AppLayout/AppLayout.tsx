@@ -1,0 +1,122 @@
+import { Layout, Menu, Typography } from 'antd'
+import {
+  BriefcaseBusiness,
+  ChevronLeft,
+  ChevronRight,
+  FolderKanban,
+  LayoutDashboard,
+  ListTodo,
+  LogOut,
+} from 'lucide-react'
+import { useState } from 'react'
+import { isAppPageKey } from '../../types/AppPageKey'
+import type { AppLayoutProps } from './types/AppLayoutProps'
+import './AppLayout.css'
+
+const { Content, Sider } = Layout
+
+const NAVIGATION_ITEMS = [
+  {
+    key: 'dashboard',
+    icon: <LayoutDashboard size={18} />,
+    label: 'Principal',
+  },
+  {
+    key: 'projects',
+    icon: <FolderKanban size={18} />,
+    label: 'Proyectos',
+  },
+  {
+    key: 'tasks',
+    icon: <ListTodo size={18} />,
+    label: 'Tareas',
+  },
+]
+
+export function AppLayout({
+  children,
+  onLogout,
+  onSelectPage,
+  pageDescription,
+  pageTitle,
+  selectedPage,
+}: AppLayoutProps) {
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
+
+  return (
+    <Layout className="app-layout">
+      <Sider
+        className="app-layout__sider"
+        collapsed={isCollapsed}
+        collapsedWidth={80}
+        width={264}
+      >
+        <div className="app-layout__sider-inner">
+          <div>
+            <div className="app-layout__sider-header">
+              <div className="app-layout__brand">
+                <div className="app-layout__brand-icon">
+                  <BriefcaseBusiness size={20} />
+                </div>
+                {!isCollapsed ? (
+                  <div>
+                    <p className="app-layout__eyebrow">EV Proyecto EV3</p>
+                    <h1 className="app-layout__brand-title">Innovatech MVP</h1>
+                  </div>
+                ) : null}
+              </div>
+
+              <button
+                className="app-layout__collapse-btn"
+                type="button"
+                onClick={() => setIsCollapsed(!isCollapsed)}
+              >
+                {isCollapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
+              </button>
+            </div>
+
+            <Menu
+              className="app-layout__menu"
+              inlineCollapsed={isCollapsed}
+              items={NAVIGATION_ITEMS}
+              mode="inline"
+              selectedKeys={[selectedPage]}
+              onClick={({ key }) => {
+                if (isAppPageKey(key)) {
+                  onSelectPage(key)
+                }
+              }}
+            />
+          </div>
+
+          <button
+            className="app-layout__logout-btn"
+            type="button"
+            onClick={onLogout}
+          >
+            <LogOut size={18} />
+            {!isCollapsed ? <span>Cerrar sesion</span> : null}
+          </button>
+        </div>
+      </Sider>
+
+      <Layout>
+        <Content className="app-layout__content">
+          <header className="app-layout__header">
+            <Typography.Text className="app-layout__section-label">
+              Aplicacion local
+            </Typography.Text>
+            <Typography.Title className="app-layout__title" level={2}>
+              {pageTitle}
+            </Typography.Title>
+            <Typography.Paragraph className="app-layout__description">
+              {pageDescription}
+            </Typography.Paragraph>
+          </header>
+
+          <main className="app-layout__page">{children}</main>
+        </Content>
+      </Layout>
+    </Layout>
+  )
+}
