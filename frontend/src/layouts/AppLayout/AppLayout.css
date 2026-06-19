@@ -14,6 +14,10 @@
   overflow: hidden;
 }
 
+.app-layout__sider .ant-layout-sider-children {
+  height: 100%;
+}
+
 .app-layout__sider-inner {
   display: flex;
   flex-direction: column;
@@ -26,6 +30,7 @@
 .app-layout__sider-rail {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   align-items: stretch;
@@ -83,6 +88,10 @@
 
 .app-layout__sider.ant-layout-sider-collapsed .app-layout__sider-footer {
   align-items: center;
+}
+
+.app-layout__sider.ant-layout-sider-collapsed .app-layout__logout-row {
+  justify-content: center;
 }
 
 .app-layout__sider.ant-layout-sider-collapsed .app-layout__collapse-btn,
@@ -152,38 +161,17 @@
 
 .app-layout__logout-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  align-items: stretch;
+  gap: 8px;
   width: 100%;
-  padding: 9px 12px;
-  border: 0;
-  border-radius: 10px;
-  background: #ff2b2b;
-  color: #ffffff;
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease;
   flex-shrink: 0;
 }
 
-.app-layout__logout-row:hover {
-  background: #e60000;
-}
-
-.app-layout__logout-row__main {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .app-layout__logout-row .app-layout__collapse-btn {
-  background: rgba(0, 0, 0, 0.18);
-}
-
-.app-layout__logout-row .app-layout__collapse-btn:hover {
-  background: rgba(0, 0, 0, 0.32);
+  width: 38px;
+  height: auto;
+  align-self: stretch;
+  flex-shrink: 0;
 }
 
 .app-layout__menu {
@@ -212,7 +200,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 100%;
+  flex: 1 1 auto;
   padding: 9px 12px;
   border: 0;
   border-radius: 10px;
@@ -222,7 +210,6 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
-  flex-shrink: 0;
 }
 
 .app-layout__logout-btn:hover {

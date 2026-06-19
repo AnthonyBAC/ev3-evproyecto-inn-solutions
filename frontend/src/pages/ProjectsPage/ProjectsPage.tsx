@@ -55,31 +55,39 @@ export function ProjectsPage({
 
       <Card size="small" title="Crear proyecto" className="projects-page__card projects-page__card--form">
         <form className="projects-page__form" onSubmit={handleSubmit}>
-          <label className="projects-page__field">
-            <span>Nombre del proyecto</span>
-            <Input
-              disabled={isSubmitting}
-              placeholder="Ejemplo: Sistema EV3"
-              size="small"
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-            />
-          </label>
+          <div className="projects-page__form-fields">
+            <label className="projects-page__field projects-page__field--name">
+              <span>Nombre del proyecto</span>
+              <Input
+                disabled={isSubmitting}
+                placeholder="Ejemplo: Sistema EV3"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+              />
+            </label>
 
-          <label className="projects-page__field">
-            <span>Descripcion</span>
-            <TextArea
-              disabled={isSubmitting}
-              placeholder="Describe el objetivo principal del proyecto"
-              rows={2}
-              value={description}
-              onChange={(event) => setDescription(event.target.value)}
-            />
-          </label>
+            <label className="projects-page__field projects-page__field--description">
+              <span>Descripcion</span>
+              <TextArea
+                disabled={isSubmitting}
+                placeholder="Describe el objetivo principal del proyecto"
+                rows={3}
+                value={description}
+                onChange={(event) => setDescription(event.target.value)}
+              />
+            </label>
+          </div>
 
-          <Button htmlType="submit" loading={isSubmitting} size="middle" type="primary">
-            Crear proyecto
-          </Button>
+          <div className="projects-page__form-actions">
+            <Button
+              disabled={name.trim().length === 0}
+              htmlType="submit"
+              loading={isSubmitting}
+              type="primary"
+            >
+              Crear proyecto
+            </Button>
+          </div>
         </form>
       </Card>
 

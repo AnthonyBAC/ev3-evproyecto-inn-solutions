@@ -123,10 +123,6 @@ export class ProjectsService {
     );
   }
 
-  isProjectClosed(projectId: string): boolean {
-    return this.findProjectById(projectId).status === 'cerrado';
-  }
-
   private validateText(value: string | undefined, message: string): string {
     const normalizedValue = value?.trim();
 

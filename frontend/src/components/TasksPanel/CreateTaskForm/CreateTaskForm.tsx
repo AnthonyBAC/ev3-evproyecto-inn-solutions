@@ -117,7 +117,6 @@ export function CreateTaskForm({
             <TextArea
               disabled={isDisabled}
               placeholder="Describe brevemente la tarea"
-              autoSize={{ minRows: 6, maxRows: 10 }}
             />
           </Form.Item>
         </div>
@@ -125,10 +124,9 @@ export function CreateTaskForm({
 
       <Form.Item className="create-task-form__actions">
         <Button
-          block
+          disabled={isDisabled}
           htmlType="submit"
           loading={isSubmitting}
-          size="large"
           type="primary"
         >
           Crear tarea

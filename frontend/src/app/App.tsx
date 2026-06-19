@@ -154,7 +154,6 @@ function App() {
     setClosingProjectId(projectId)
 
     try {
-      await wait(5000)
       await closeProject(projectId)
       await refreshWorkspaceData()
     } catch (error: unknown) {
@@ -313,10 +312,4 @@ function getErrorMessage(error: unknown, fallbackMessage: string): string {
   }
 
   return fallbackMessage
-}
-
-async function wait(duration: number): Promise<void> {
-  await new Promise((resolve) => {
-    window.setTimeout(resolve, duration)
-  })
 }

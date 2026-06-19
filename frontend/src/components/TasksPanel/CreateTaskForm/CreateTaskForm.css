@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: minmax(260px, 1fr) minmax(320px, 1.25fr);
   gap: 20px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .create-task-form__column {
@@ -25,32 +25,58 @@
 }
 
 .create-task-form__field--description {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
+}
+
+.create-task-form__field--description .ant-form-item-row {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .create-task-form__field--description .ant-form-item-control {
   flex: 1;
+  min-height: 0;
   display: flex;
 }
 
 .create-task-form__field--description .ant-form-item-control-input {
-  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
 }
 
 .create-task-form__field--description .ant-form-item-control-input-content {
-  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
 }
 
 .create-task-form__field--description textarea {
   resize: none;
+  flex: 1;
   min-height: 140px;
-  height: 100%;
 }
 
 .create-task-form__actions {
   margin: 0 !important;
+  padding-top: 12px;
+  border-top: 1px solid #eef1f6;
+}
+
+.create-task-form__actions .ant-form-item-control-input-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .create-task-form__actions .ant-btn {
+    width: 100%;
+  }
 }
 
 .create-task-form__hint {
