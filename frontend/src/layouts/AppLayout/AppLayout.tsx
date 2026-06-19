@@ -81,19 +81,18 @@ export function AppLayout({
           </div>
 
           <div className="app-layout__sider-footer">
-            <Tooltip
-              placement={isCollapsed ? 'right' : 'top'}
-              title={isCollapsed ? 'Expandir' : 'Colapsar'}
-            >
-              <button
-                className="app-layout__collapse-btn"
-                type="button"
-                onClick={() => setIsCollapsed(!isCollapsed)}
-              >
-                {isCollapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
-                {!isCollapsed ? <span>Colapsar</span> : null}
-              </button>
-            </Tooltip>
+            {isCollapsed ? (
+              <Tooltip placement="right" title="Expandir">
+                <button
+                  aria-label="Expandir"
+                  className="app-layout__collapse-btn app-layout__collapse-btn--compact"
+                  type="button"
+                  onClick={() => setIsCollapsed(!isCollapsed)}
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </Tooltip>
+            ) : null}
 
             <button
               className="app-layout__logout-btn"
@@ -103,6 +102,17 @@ export function AppLayout({
               <LogOut size={18} />
               {!isCollapsed ? <span>Cerrar sesion</span> : null}
             </button>
+
+            {!isCollapsed ? (
+              <button
+                className="app-layout__collapse-btn"
+                type="button"
+                onClick={() => setIsCollapsed(!isCollapsed)}
+              >
+                <ChevronLeft size={18} />
+                <span>Colapsar</span>
+              </button>
+            ) : null}
           </div>
         </div>
       </Sider>
