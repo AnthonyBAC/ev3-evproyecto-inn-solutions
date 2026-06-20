@@ -1,3 +1,4 @@
+// Módulo de health check — endpoint simple para verificar que el backend está corriendo
 import { Module } from '@nestjs/common';
 import { SystemStatusController } from './controllers/system-status/system-status.controller';
 import { SystemStatusService } from './services/system-status/system-status.service';

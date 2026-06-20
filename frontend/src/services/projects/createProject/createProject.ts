@@ -1,3 +1,4 @@
+// Llama a POST /api/projects con name y description en el body
 import { getApiErrorMessage } from '../../shared/getApiErrorMessage/getApiErrorMessage'
 import { isProject } from '../../../types/Project'
 import type { Project } from '../../../types/Project'

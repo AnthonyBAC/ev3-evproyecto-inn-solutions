@@ -6,32 +6,70 @@ Monorepo con **pnpm workspaces**. Backend REST API en NestJS + frontend SPA en R
 
 ## Stack tecnológico
 
-### Backend
+### Backend — Producción
 
-| Tecnología | Versión | Rol |
+| Librería | Versión | Rol |
 |---|---|---|
-| NestJS | 11 | Framework backend (controllers, módulos, DI) |
-| Express | (interno de NestJS) | Servidor HTTP |
-| TypeScript | 5.7 | Lenguaje |
-| RxJS | 7.8 | Programación reactiva (incluido con NestJS) |
+| `@nestjs/common` | ^11.0.1 | Decoradores, pipes, guards, interfaces |
+| `@nestjs/core` | ^11.0.1 | Motor de NestJS (módulos, DI, bootstrap) |
+| `@nestjs/platform-express` | ^11.0.1 | Adaptador HTTP Express |
+| `reflect-metadata` | ^0.2.2 | Metadatos para decoradores TS |
+| `rxjs` | ^7.8.1 | Programación reactiva |
 
-### Frontend
+### Backend — Desarrollo
 
-| Tecnología | Versión | Rol |
+| Librería | Versión | Rol |
 |---|---|---|
-| React | 19.2 | UI |
-| Vite | 8.0 | Bundler + dev server |
-| Ant Design | 6.4 | Componentes UI |
-| Lucide React | 1.18 | Iconos |
-| TypeScript | 6.0 | Lenguaje |
+| `@nestjs/cli` | ^11.0.0 | CLI (nest build, nest start) |
+| `@nestjs/schematics` | ^11.0.0 | Generadores de código |
+| `@nestjs/testing` | ^11.0.1 | Utilidades de testing |
+| `typescript` | ^5.7.3 | Lenguaje |
+| `jest` | ^30.0.0 | Test runner |
+| `ts-jest` | ^29.2.5 | Transformador TS para Jest |
+| `supertest` | ^7.0.0 | HTTP assertions para tests e2e |
+| `eslint` | ^9.18.0 | Linter |
+| `typescript-eslint` | ^8.20.0 | Plugin TS para ESLint |
+| `eslint-config-prettier` | ^10.0.1 | Desactiva reglas que chocan con Prettier |
+| `eslint-plugin-prettier` | ^5.2.2 | Ejecuta Prettier como regla de ESLint |
+| `prettier` | ^3.4.2 | Formateador de código |
+| `ts-node` | ^10.9.2 | Ejecución directa de TS |
+| `ts-loader` | ^9.5.2 | Loader TS para webpack (NestJS) |
+| `tsconfig-paths` | ^4.2.0 | Resuelve aliases de tsconfig |
+| `@types/express` | ^5.0.0 | Tipos para Express |
+| `@types/jest` | ^30.0.0 | Tipos para Jest |
+| `@types/node` | ^24.0.0 | Tipos de Node |
+| `@types/supertest` | ^7.0.0 | Tipos para supertest |
 
-### Tooling común
+### Frontend — Producción
+
+| Librería | Versión | Rol |
+|---|---|---|
+| `react` | ^19.2.6 | UI |
+| `react-dom` | ^19.2.6 | Renderizado en DOM |
+| `antd` | ^6.4.4 | Componentes UI (Cards, Forms, Layout, Menu, Select, Table, Tag, Modal, etc.) |
+| `lucide-react` | ^1.18.0 | Iconos |
+
+### Frontend — Desarrollo
+
+| Librería | Versión | Rol |
+|---|---|---|
+| `vite` | ^8.0.12 | Bundler + dev server |
+| `@vitejs/plugin-react` | ^6.0.1 | Plugin React para Vite |
+| `typescript` | ~6.0.2 | Lenguaje |
+| `eslint` | ^10.3.0 | Linter |
+| `typescript-eslint` | ^8.59.2 | Plugin TS para ESLint |
+| `eslint-plugin-react-hooks` | ^7.1.1 | Reglas de hooks de React |
+| `eslint-plugin-react-refresh` | ^0.5.2 | HMR con React Refresh |
+| `@types/react` | ^19.2.14 | Tipos de React |
+| `@types/react-dom` | ^19.2.3 | Tipos de ReactDOM |
+| `@types/node` | ^24.12.3 | Tipos de Node |
+| `globals` | ^17.6.0 | Variables globales para ESLint |
+
+### Tooling monorepo
 
 | Herramienta | Uso |
 |---|---|
-| pnpm | Gestor de paquetes + workspaces |
-| ESLint + Prettier | Linting y formateo (backend) |
-| Jest + Supertest | Testing (backend) |
+| **pnpm** | Gestor de paquetes + workspaces |
 
 ---
 

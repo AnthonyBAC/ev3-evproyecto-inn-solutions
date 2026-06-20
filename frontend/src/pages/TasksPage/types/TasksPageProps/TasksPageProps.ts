@@ -1,3 +1,4 @@
+// Props de TasksPage — tareas, proyectos, handlers, filtros
 import type { Project } from '../../../../types/Project'
 import type { Task } from '../../../../types/Task'
 import type { TaskStatus } from '../../../../types/TaskStatus'

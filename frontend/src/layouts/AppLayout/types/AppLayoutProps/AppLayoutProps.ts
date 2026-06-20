@@ -1,3 +1,4 @@
+// Props del AppLayout — children, página seleccionada, handlers
 import type { ReactNode } from 'react'
 import type { AppPageKey } from '../../../../types/AppPageKey'
 

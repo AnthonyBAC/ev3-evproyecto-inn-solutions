@@ -255,7 +255,8 @@
 }
 
 @media (max-width: 992px) {
-  .app-layout {
+/* Estilos del layout principal con sidebar colapsable */
+.app-layout {
     flex-direction: column !important;
   }
 

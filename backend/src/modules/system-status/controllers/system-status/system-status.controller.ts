@@ -1,3 +1,4 @@
+// Controller de health check — expone GET /api/system-status
 import { Controller, Get } from '@nestjs/common';
 import { SystemStatusResponseDto } from '../../dto/system-status-response-dto/system-status-response.dto';
 import { SystemStatusService } from '../../services/system-status/system-status.service';

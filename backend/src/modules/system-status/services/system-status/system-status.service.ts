@@ -1,3 +1,4 @@
+// Servicio de health check — retorna estado ok con timestamp actual
 import { Injectable } from '@nestjs/common';
 import { SystemStatusResponseDto } from '../../dto/system-status-response-dto/system-status-response.dto';
 

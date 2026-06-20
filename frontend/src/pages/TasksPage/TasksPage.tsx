@@ -1,3 +1,4 @@
+// Página de tareas — formulario de creación, listado con filtros por proyecto/estado, cambio de estado vía Select
 import { Alert, Card, Empty, List, Select, Tag, Typography } from 'antd'
 import { useMemo, useState } from 'react'
 import { CreateTaskForm } from '../../components/TasksPanel/CreateTaskForm'

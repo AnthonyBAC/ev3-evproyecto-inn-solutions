@@ -1,3 +1,4 @@
+// Panel de overview — barra de progreso global y conteo de proyectos/tareas del dashboard
 import { Card, Progress, Typography } from 'antd'
 import { Activity } from 'lucide-react'
 import type { DashboardOverviewPanelProps } from './types/DashboardOverviewPanelProps'

@@ -1,3 +1,4 @@
+// Props del SystemStatusCard — estado del sistema, loading, errores
 import type { SystemStatus } from '../../../../types/SystemStatus'
 
 export interface SystemStatusCardProps {

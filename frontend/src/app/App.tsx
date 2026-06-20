@@ -1,3 +1,4 @@
+// Componente raíz — estado global, autenticación, routing manual, carga inicial de datos y handlers CRUD
 import { ConfigProvider } from 'antd'
 import { useEffect, useState } from 'react'
 import { LoginPage } from '../pages/LoginPage'

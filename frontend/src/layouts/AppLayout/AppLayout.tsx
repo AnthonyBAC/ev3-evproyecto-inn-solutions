@@ -1,3 +1,4 @@
+// Layout principal — sidebar colapsable con navegación, header con título/descripción de página y botón de logout
 import { Layout, Menu, Tooltip, Typography } from 'antd'
 import {
   BriefcaseBusiness,

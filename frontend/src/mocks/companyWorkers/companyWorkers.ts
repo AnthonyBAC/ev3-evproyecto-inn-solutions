@@ -1,3 +1,4 @@
+// Lista mock de 10 trabajadores de la empresa — se usa como opciones en el formulario de crear tarea
 import type { Worker } from '../../types/Worker'
 
 export const COMPANY_WORKERS: Worker[] = [

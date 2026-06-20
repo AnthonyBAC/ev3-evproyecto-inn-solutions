@@ -1,3 +1,4 @@
+// Llama a GET /api/projects y valida que el array de respuesta tenga el formato esperado
 import { getApiErrorMessage } from '../../shared/getApiErrorMessage/getApiErrorMessage'
 import { isProject } from '../../../types/Project'
 import type { Project } from '../../../types/Project'

@@ -1,3 +1,4 @@
+// Entry point de la SPA — monta <App /> en el DOM con StrictMode y carga estilos globales de Ant Design
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import 'antd/dist/reset.css'

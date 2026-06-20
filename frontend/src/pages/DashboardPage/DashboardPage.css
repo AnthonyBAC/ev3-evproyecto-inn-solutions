@@ -25,7 +25,8 @@
 }
 
 @media (max-width: 768px) {
-  .dashboard-page {
+/* Estilos de la página de dashboard */
+.dashboard-page {
     grid-template-rows: auto auto auto;
   }
 }

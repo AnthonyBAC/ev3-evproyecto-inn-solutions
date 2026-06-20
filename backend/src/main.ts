@@ -1,3 +1,4 @@
+// Bootstrap de la aplicación NestJS — crea el servidor HTTP en el puerto 3000 con prefijo /api
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 

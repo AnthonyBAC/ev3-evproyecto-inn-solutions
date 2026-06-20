@@ -1,3 +1,4 @@
+// Type guard en runtime — verifica que un objeto desconocido tenga la forma de Project
 import { isProjectStatus } from '../ProjectStatus'
 import type { Project } from './Project'
 

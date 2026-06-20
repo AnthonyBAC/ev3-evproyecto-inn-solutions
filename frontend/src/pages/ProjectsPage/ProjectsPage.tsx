@@ -1,3 +1,4 @@
+// Página de proyectos — formulario de creación, listado con filtros por estado/fecha, cierre con modal de confirmación
 import { Alert, Button, Card, Empty, Input, List, Modal, Progress, Select, Space, Tag, Typography } from 'antd'
 import { useMemo, useState } from 'react'
 import type { FormEvent } from 'react'

@@ -1,3 +1,4 @@
+// Type guard — verifica que un valor sea un ProjectStatus válido
 import type { ProjectStatus } from './ProjectStatus'
 
 export function isProjectStatus(value: unknown): value is ProjectStatus {

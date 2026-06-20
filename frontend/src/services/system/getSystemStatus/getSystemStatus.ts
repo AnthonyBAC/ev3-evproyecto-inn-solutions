@@ -1,3 +1,4 @@
+// Llama a GET /api/system-status y valida la respuesta con type guard antes de retornarla
 import type { SystemStatus } from '../../../types/SystemStatus'
 
 const SYSTEM_STATUS_ENDPOINT = '/api/system-status'

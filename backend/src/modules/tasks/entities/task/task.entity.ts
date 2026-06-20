@@ -1,3 +1,4 @@
+// Entidad Task — representa una tarea vinculada a un proyecto con responsable y estado
 import { TaskStatus } from '../../types/task-status/task-status.type';
 
 export class TaskEntity {

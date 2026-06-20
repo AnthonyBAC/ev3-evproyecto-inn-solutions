@@ -1,3 +1,4 @@
+// Lógica de negocio de proyectos — CRUD en memoria, mock data, cálculo automático de progreso y estado
 import {
   BadRequestException,
   Injectable,

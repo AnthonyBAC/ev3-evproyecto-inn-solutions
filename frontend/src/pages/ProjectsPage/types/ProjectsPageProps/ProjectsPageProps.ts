@@ -1,3 +1,4 @@
+// Props de ProjectsPage — proyectos, handlers CRUD, estados de loading
 import type { Project } from '../../../../types/Project'
 
 export interface ProjectsPageProps {

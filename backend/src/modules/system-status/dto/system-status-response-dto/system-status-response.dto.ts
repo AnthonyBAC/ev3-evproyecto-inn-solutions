@@ -1,3 +1,4 @@
+// DTO de respuesta del health check — name, status y timestamp
 export class SystemStatusResponseDto {
   constructor(
     public readonly name: 'backend',

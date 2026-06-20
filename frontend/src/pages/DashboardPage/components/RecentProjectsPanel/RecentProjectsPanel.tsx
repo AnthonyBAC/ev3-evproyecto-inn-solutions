@@ -1,3 +1,4 @@
+// Panel de proyectos recientes — lista los últimos 5 proyectos con su estado y progreso
 import { Card, Empty, List, Tag, Typography } from 'antd'
 import type { Project } from '../../../../types/Project'
 import type { RecentProjectsPanelProps } from './types/RecentProjectsPanelProps'

@@ -162,7 +162,8 @@
     width: 100%;
   }
 
-  .projects-page {
+/* Estilos de la página de proyectos */
+.projects-page {
     grid-template-rows: auto minmax(0, 1fr);
   }
 

@@ -1,3 +1,4 @@
+// Llama a PATCH /api/projects/:id/close para cerrar un proyecto
 import { getApiErrorMessage } from '../../shared/getApiErrorMessage/getApiErrorMessage'
 import { isProject } from '../../../types/Project'
 import type { Project } from '../../../types/Project'

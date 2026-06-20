@@ -1,3 +1,4 @@
+// Controller REST de tareas — expone GET / POST / PATCH bajo /api/tasks
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { CreateTaskDto } from '../../dto/create-task-dto/create-task.dto';
 import { TaskResponseDto } from '../../dto/task-response-dto/task-response.dto';

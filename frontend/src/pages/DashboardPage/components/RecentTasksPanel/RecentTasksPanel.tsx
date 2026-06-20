@@ -1,3 +1,4 @@
+// Panel de tareas recientes — lista las últimas 5 tareas con su estado y proyecto asociado
 import { Card, Empty, List, Tag, Typography } from 'antd'
 import type { Task } from '../../../../types/Task'
 import type { RecentTasksPanelProps } from './types/RecentTasksPanelProps'

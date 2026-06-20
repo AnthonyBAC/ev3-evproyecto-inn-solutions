@@ -1,3 +1,4 @@
+// DTO de respuesta de tarea — incluye el nombre del proyecto además de los datos de la tarea
 import { TaskStatus } from '../../types/task-status/task-status.type';
 
 export class TaskResponseDto {

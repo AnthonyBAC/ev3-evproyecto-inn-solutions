@@ -1,3 +1,4 @@
+// Controller REST de proyectos — expone GET / POST / PATCH bajo /api/projects
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { CreateProjectDto } from '../../dto/create-project-dto/create-project.dto';
 import { ProjectResponseDto } from '../../dto/project-response-dto/project-response.dto';

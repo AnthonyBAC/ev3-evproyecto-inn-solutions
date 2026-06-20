@@ -1,3 +1,4 @@
+// Lógica de negocio de tareas — CRUD en memoria, mock data, validación de estados y sincronización con proyectos
 import {
   BadRequestException,
   Injectable,

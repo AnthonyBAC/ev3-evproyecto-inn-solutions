@@ -1,3 +1,4 @@
+// DTO de respuesta de proyecto — todos los campos que devuelve la API al consultar un proyecto
 import { ProjectStatus } from '../../types/project-status/project-status.type';
 
 export class ProjectResponseDto {

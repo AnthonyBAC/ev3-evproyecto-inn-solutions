@@ -1,3 +1,4 @@
+// Extrae el mensaje de error del body de una respuesta HTTP fallida, con fallback
 export async function getApiErrorMessage(
   response: Response,
   fallbackMessage: string,

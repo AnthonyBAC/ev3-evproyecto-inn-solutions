@@ -1,3 +1,4 @@
+// Página de login — formulario con usuario/contraseña, validación contra credenciales hardcodeadas
 import { Alert, Button, Card, Input, Typography } from 'antd'
 import { LockKeyhole, ShieldUser } from 'lucide-react'
 import { useState } from 'react'

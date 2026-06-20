@@ -1,3 +1,4 @@
+// Entidad Project — representa un proyecto con sus métricas y fechas
 import { ProjectStatus } from '../../types/project-status/project-status.type';
 
 export class ProjectEntity {

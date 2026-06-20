@@ -1,3 +1,4 @@
+// Type guard en runtime — verifica que un objeto desconocido tenga la forma de Task
 import { isTaskStatus } from '../TaskStatus'
 import type { Task } from './Task'
 

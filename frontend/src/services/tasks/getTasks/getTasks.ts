@@ -1,3 +1,4 @@
+// Llama a GET /api/tasks y valida que el array de respuesta tenga el formato esperado
 import { getApiErrorMessage } from '../../shared/getApiErrorMessage/getApiErrorMessage'
 import { isTask } from '../../../types/Task'
 import type { Task } from '../../../types/Task'

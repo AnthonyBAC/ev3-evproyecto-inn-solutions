@@ -1,3 +1,4 @@
+// Test unitario del SystemStatusController
 import { Test, TestingModule } from '@nestjs/testing';
 import { SystemStatusController } from './system-status.controller';
 import { SystemStatusService } from '../../services/system-status/system-status.service';

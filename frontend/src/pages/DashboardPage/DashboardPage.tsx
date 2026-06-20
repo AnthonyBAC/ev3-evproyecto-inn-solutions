@@ -1,3 +1,4 @@
+// Página principal — 4 métricas en cards, panel de overview, estado del sistema, proyectos y tareas recientes
 import { Card, Col, Row, Statistic } from 'antd'
 import { FolderCheck, FolderOpen, ListChecks, ListTodo } from 'lucide-react'
 import { DashboardOverviewPanel } from './components/DashboardOverviewPanel'

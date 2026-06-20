@@ -1,3 +1,4 @@
+// Card de estado del sistema — muestra si el backend está online/offline con indicador visual
 import { Alert, Card, Descriptions, Skeleton, Tag, Typography } from 'antd'
 import type { SystemStatusCardProps } from './types/SystemStatusCardProps'
 import './SystemStatusCard.css'
